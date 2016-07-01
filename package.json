@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "babel --out-dir dist src",
+    "build": "babel --out-dir dist src; webpack",
     "test": "mocha --compilers js:babel/register",
     "prepublish": "npm run clean && npm run build",
     "example": "cd example && rm -rf node_modules/redux-immutable-state-invariant && npm install && npm start"
@@ -15,7 +15,8 @@
   "devDependencies": {
     "babel": "^5.8.3",
     "expect": "^1.8.0",
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "webpack": "^1.13.1"
   },
   "dependencies": {
     "invariant": "^2.1.0",
